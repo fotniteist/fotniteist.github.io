@@ -47,7 +47,7 @@ header, footer {
     width: 35em;
     height: 22em;
     margin: 5em auto;
-    background-color: red;
+    background-color: rgb(43, 153, 82);
     border: 0.2em solid black;
     border-radius: 1.5em;
   }
@@ -67,12 +67,4 @@ header, footer {
   .card article img {
     max-height: 100%;
     float: right;
-  }
- card2 {
-    width: 35em;
-    height: 22em;
-    margin: 5em auto;
-    background-color: rgb(65, 150, 70);
-    border: 0.2em solid black;
-    border-radius: 1.5em;
   }
