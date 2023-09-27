@@ -15,11 +15,21 @@ body, div {
 }
 
 .flower2 {
-    position: absolute;
+    position: relative;
     width: 1000px;
     height: 1000px;
     bottom: 0px;
-    left: 125px;
+    left: 0px;
+    transform: rotate(10deg);
+}
+
+.flower3 {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    bottom: 0px;
+    left: 0px;
+    transform: rotate(10deg);
 }
 
 .center {
@@ -121,3 +131,37 @@ body, div {
     bottom: 10px;
     right: 20px;
 }
+
+.petal3 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(208, 248, 188);
+    border-radius: 50%;
+}
+
+
+.petal3:nth-child(1) {
+    transform: rotate(0deg);
+    top: 10px;
+    left: 20px;
+}
+
+.petal3:nth-child(2) {
+    transform: rotate(90deg);
+    top: 10px;
+    right: 20px;
+}
+
+.petal3:nth-child(3) {
+    transform: rotate(180deg);
+    bottom: 10px;
+    left: 20px;
+}
+
+.petal3:nth-child(4) {
+    transform: rotate(270deg);
+    bottom: 10px;
+    right: 20px;
+}
+
