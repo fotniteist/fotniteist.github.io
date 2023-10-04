@@ -18,10 +18,10 @@
     margin: 20px auto;
     position: relative;
     background-image:
-    linear-gradient(rgba(0,0,0,0.5), rgb(0, 0, 0, 0)),
+    linear-gradient(rgba(0,0,0,0.5), rgba(255, 255, 255, 0)),
     url(top-image.png),
     url(bottom-image.png);
-    background-position: bottom, top, bottom;
+    background-position: top, top, bottom;
     background-repeat: no-repeat;
     background-color: white;
     border-top: 1mm solid red;
@@ -47,6 +47,7 @@
     color: white;
     text-shadow: 1px 1px 1px black;
     background-image: url(logo.png);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.525);
    
   }
 
