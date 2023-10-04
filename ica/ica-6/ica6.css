@@ -17,19 +17,25 @@
     height: 297mm;
     margin: 20px auto;
     position: relative;
-    background-image: url(top-image.png),url(bottom-image.png);
-    background-position: top, bottom;
+    background-image:
+    linear-gradient(to bottom,rgba(0,0,0,0), rgb(0, 0, 0, 0.5)),
+    url(top-image.png),
+    url(bottom-image.png);
+    background-position: top, top, bottom;
     background-repeat: no-repeat;
     background-color: white;
     border-top: 1mm solid red;
     border-bottom: 1mm solid red;
   }
   
+  .black{
+    background-color: black;
+  }
+  
   address {
     position: absolute;
     bottom: 8mm;
     right: 20mm;
-    
   }
   
   h1 {
@@ -45,6 +51,7 @@
     color: white;
     text-shadow: 1px 1px 1px black;
     background-image: url(logo.png);
+   
   }
 
   
