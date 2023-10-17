@@ -18,14 +18,13 @@ body{
     height:20vh;
     position: relative;
     background-color: orangered;
+    animation: box2move 1s infinite;
 }
 
 @keyframes box2move{
-    from {
-        transform: translateX(0%);
-      }
-    
-      to {
-        transform: translateX(100%);
-      }
-    }
+    0%   {top: 0px;}
+  25%  {top: 1000px;}
+  50%  {top: 100px;}
+  75%  {top: 750px;}
+  100% {top: 0px;}
+}
