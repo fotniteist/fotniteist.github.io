@@ -19,6 +19,7 @@ body{
     position: relative;
     background-color: orangered;
     animation: box2move 1s infinite;
+    animation-direction: alternate;
 }
 
 @keyframes box2move{
