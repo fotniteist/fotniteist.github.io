@@ -18,14 +18,32 @@ body{
     height:20vh;
     position: relative;
     background-color: orangered;
-    animation: box2move 1s infinite;
+    animation: box2move 2s infinite;
     animation-direction: alternate;
 }
 
 @keyframes box2move{
-    0%  {left: 0px;}
-  25%  {left: 1000px;}
+    0% {left: 0px;}
+  25%  {left: 1000px;
+        font-size: 50vw;
+        color: aqua;
+}
   50%  {left: 100px;}
   75%  {left: 750px;}
   100% {left: 0px;}
+}
+
+#nuts {
+    width: 25vw;
+    height: 20vh;
+    background-color: black;
+    color: aqua;
+    font-size: 1vw;
+    transition-property: font-size;
+    transition-duration: 1s;
+    transition-delay: 0s;
+}
+
+#nuts:hover {
+    font-size: 3vw;
 }

@@ -4,8 +4,15 @@ main {
     
 }
 
-#Collin {
-    font-size: 19em;
+.Collin {
+    font-size: 1vw;
     color: black;
 
+}
+
+.dots {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    
 }
