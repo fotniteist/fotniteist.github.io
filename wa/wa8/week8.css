@@ -2,7 +2,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: blanchedalmond;
+    background-color: rgb(219, 238, 255);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 nav{
     height: 50vh;
@@ -10,7 +11,7 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     height:20px;
-    background-color: blueviolet;
+    background-color: rgb(255, 255, 255);
 }
 nav a{
     width:10vw;
@@ -22,15 +23,35 @@ nav a{
 
 img{
     width:30vw;
-    height: 30vh;
+    height: 40vh;
 }
 
 #red-ball{
-    background-color: crimson;
+    background-color: rgb(255, 172, 240);
     width: 20px;
     height:20px;
     border-radius: 50%;
     position: absolute;
     left:5vw;
     top:0;
+    animation: moving-ball 2s infinite;
+    animation-direction: alternate;
+
+}
+
+#red-ball:hover {
+    width: 10vw;
+    height: 20vh;
+}
+
+img:hover {
+    height: 100vh;
+}
+
+@keyframes moving-ball{
+    0% {left: 0px;}
+  25%  {left: 1000px;}
+  50%  {left: 100px;}
+  75%  {left: 750px;}
+  100% {left: 0px;}
 }
