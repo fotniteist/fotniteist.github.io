@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First time java</title>
+    <style>
+        button, div{
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-align: center;
+            border: 2px solid green;
+            background-color: blue;
+            color: crimson;
+            box-shadow: 1px 1px 2px black;
+            border-radius: 10px;
+            padding: 3px 10px;
+            cursor: pointer;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <button type="button">Player 1: </button>
+    <div id="press" type="button">Press me</div>
+
+
+
+
+    <script>
+        // variable defined using 'const' or 'let'. if variable changes use let
+        const button = document.querySelector("button");
+        const press = document.getElementById("press");
+        
+        button.addEventListener('click', updateName);
+        press.addEventListener('click', updateName);
+        
+        function updateName() {
+            //let name = prompt("Enter a new name");
+            let name = 10;
+            console.log("The funtion ran correctly")
+            console.log(name);
+            //button.textContent = `Player 1: ${name}`;
+            press.innerHTML = `<h1>Hello!</h1>`
+            
+        }
+    </script>
+</body>
+</html>

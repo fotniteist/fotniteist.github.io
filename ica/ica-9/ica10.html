@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button, div{
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-align: center;
+            border: 2px solid green;
+            background-color: blue;
+            color: crimson;
+            box-shadow: 1px 1px 2px black;
+            border-radius: 10px;
+            padding: 3px 10px;
+            cursor: pointer;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button type="button">Click me for money</button>
+    <div id="box"></div>
+
+    
+
+    <script>
+        const button = document.querySelector("button");
+        const div = document.getElementById("div");
+        button.addEventListener('click', changeColor);
+        function changeColor () {
+            div.style.backgroundColor == "red";
+        }
+    </script>
+</body>
+</html>
