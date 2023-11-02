@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Button Actions</title>
     <style>
-        button, div{
-            font-family: Arial, Helvetica, sans-serif;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            text-align: center;
-            border: 2px solid green;
-            background-color: blue;
-            color: crimson;
-            box-shadow: 1px 1px 2px black;
-            border-radius: 10px;
-            padding: 3px 10px;
-            cursor: pointer;
-            height: 100px;
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .square {
             width: 100px;
+            height: 100px;
+            background-color: yellow;
         }
     </style>
 </head>
 <body>
-    <button type="button">Click me for money</button>
-    <div id="box"></div>
-
-    
+    <div class="square"></div>
+    <button id="colorButton">Change Background Color</button>
+    <button id="sizeButton">Change Square Size</button>
 
     <script>
-        const button = document.querySelector("button");
-        const div = document.getElementById("div");
-        button.addEventListener('click', changeColor);
-        function changeColor () {
-            div.style.backgroundColor == "red";
-        }
+        const square = document.querySelector('.square');
+        const colorButton = document.getElementById('colorButton');
+        const sizeButton = document.getElementById('sizeButton');
+
+        colorButton.addEventListener('click', () => {
+            if (document.body.style.backgroundColor === 'blue') {
+                document.body.style.backgroundColor = 'white';
+            } else {
+                document.body.style.backgroundColor = 'blue';
+            }
+        });
+
+        sizeButton.addEventListener('click', () => {
+            const newSize = Math.floor(Math.random() * 200) + 50;
+            square.style.width = `${newSize}px`;
+            square.style.height = `${newSize}px`;
+        });
     </script>
 </body>
 </html>
