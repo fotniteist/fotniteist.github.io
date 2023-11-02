@@ -1,18 +1,13 @@
-main {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
 }
 
-.Collin {
-    font-size: 1vw;
-    color: black;
-
-}
-
-.dots {
-    width: 20px;
-    height: 20px;
-    background-color: black;
-    
+#fractal-container {
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
 }
