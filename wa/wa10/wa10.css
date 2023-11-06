@@ -1,6 +1,6 @@
 
       body {
-        font-family: helvetica, sans-serif;
+        font-family: 'Times New Roman', Times, serif;
         width: 350px;
 
       }
@@ -19,8 +19,8 @@
       }
 
       p {
-        background: #ffc125;
-        color: #5e2612;
+        background: #6ab5ff;
+        color: #000000;
         padding: 10px;
         visibility: hidden;
       }
