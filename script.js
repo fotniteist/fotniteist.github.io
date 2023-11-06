@@ -1,14 +1,16 @@
-const canvas = document.getElementById("fractal-container");
+const canvas = document.getElementById("fractal-canvas");
 const ctx = canvas.getContext("2d");
 
-const maxIterations = 100;
 let minRe = -2;
 let maxRe = 2;
 let minIm = -2;
 let maxIm = 2;
-let zoomFactor = 1.5;
+const maxIterations = 100;
+const zoomFactor = 1.5;
 
 function drawMandelbrot() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
     for (let x = 0; x < canvas.width; x++) {
         for (let y = 0; y < canvas.height; y++) {
             const re = map(x, 0, canvas.width, minRe, maxRe);
@@ -35,16 +37,13 @@ function drawMandelbrot() {
             }
 
             const brightness = map(n, 0, maxIterations, 0, 1);
-            const color = `hsl(0, 100%, ${brightness * 100}%)`;
+            const colorValue = Math.floor(brightness * 255);
+            const color = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
 
             ctx.fillStyle = color;
             ctx.fillRect(x, y, 1, 1);
         }
     }
-}
-
-function map(value, start1, stop1, start2, stop2) {
-    return start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));
 }
 
 function zoomIn() {
@@ -75,4 +74,6 @@ function zoomOut() {
     drawMandelbrot();
 }
 
-drawMandelbrot();
+function map(value, start1, stop1, start2, stop2) {
+    return start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));
+}

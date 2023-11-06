@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mandelbrot Set Fractal</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mainstyle.css">
 </head>
 
 <body>
-    <div id="fractal-container"></div>
+    <canvas id="fractal-canvas" width="600" height="600"></canvas>
+    <button onclick="drawMandelbrot()">Draw Mandelbrot Set</button>
+    <button onclick="changeColors()">Change Colors</button>
     <button onclick="zoomIn()">Zoom In</button>
-    <button onclick="zoomOut()">Zoom Out</button>
+<button onclick="zoomOut()">Zoom Out</button>
 
     <script src="script.js"></script>
 </body>
