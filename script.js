@@ -46,6 +46,7 @@ function drawMandelbrot() {
     }
 }
 
+
 function zoomIn() {
     const newWidth = (maxRe - minRe) / zoomFactor;
     const newHeight = (maxIm - minIm) / zoomFactor;
@@ -76,4 +77,31 @@ function zoomOut() {
 
 function map(value, start1, stop1, start2, stop2) {
     return start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));
+}
+function scrollLeft() {
+    const shiftAmount = (maxRe - minRe) * scrollFactor;
+    minRe -= shiftAmount;
+    maxRe -= shiftAmount;
+    drawMandelbrot();
+}
+
+function scrollRight() {
+    const shiftAmount = (maxRe - minRe) * scrollFactor;
+    minRe += shiftAmount;
+    maxRe += shiftAmount;
+    drawMandelbrot();
+}
+
+function scrollUp() {
+    const shiftAmount = (maxIm - minIm) * scrollFactor;
+    minIm -= shiftAmount;
+    maxIm -= shiftAmount;
+    drawMandelbrot();
+}
+
+function scrollDown() {
+    const shiftAmount = (maxIm - minIm) * scrollFactor;
+    minIm += shiftAmount;
+    maxIm += shiftAmount;
+    drawMandelbrot();
 }
