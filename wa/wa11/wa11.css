@@ -1,13 +1,12 @@
 h1 {
   font-family: 'Times New Roman', Times, serif;
+  font-size: 60px;
   text-align: center;
-  color: white;
 }
 
 body {
   width: 640px;
   margin: 0 auto;
-  background-color: aqua;
 }
 
 .full-img {
@@ -15,6 +14,7 @@ body {
   display: block;
   width: 640px;
   height: 480px;
+  left: 150px;
 }
 
 .overlay {
@@ -38,8 +38,16 @@ button {
 }
 
 .thumb-bar img {
-  display: block;
+  display: inline;
   width: 20%;
   float: left;
   cursor: pointer;
+  margin: 10px;
+}
+
+.displayed-img {
+  display: block;
+  right: 100px;
+  width: 50%;
+  height: auto;
 }
