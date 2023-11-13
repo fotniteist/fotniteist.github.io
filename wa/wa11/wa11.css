@@ -1,11 +1,13 @@
 h1 {
-  font-family: helvetica, arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   text-align: center;
+  color: white;
 }
 
 body {
   width: 640px;
   margin: 0 auto;
+  background-color: aqua;
 }
 
 .full-img {
