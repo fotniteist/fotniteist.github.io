@@ -14,11 +14,11 @@ const images = ['pic1.jpg',
 
 /* Declaring the alternative text for each image file */
 const alts = {
-    'pic1.jpg' : 'Eye Closeup',
-    'pic2.jpg' : 'Folded rock',
-    'pic3.jpg' : 'Flowers',
-    'pic4.jpg' : 'Egypt',
-    'pic5.jpg' : 'Butterfly'
+    'pic1.jpg' : 'Scary Bear',
+    'pic2.jpg' : 'Nice Bear',
+    'pic3.jpg' : 'Weird Bear',
+    'pic4.jpg' : 'Bird!',
+    'pic5.jpg' : 'Cool Bird'
 }
 /* Looping through images */
 for (const image of images) {
