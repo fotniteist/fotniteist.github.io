@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Number Picker</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Is this your phone number?</h2>
+    <input type="range" id="phoneNumberSlider" min="0" max="100" value="0" oninput="updateNumbers()">
+    <br><br>
+    <div id="randomNumbers"></div>
+    <br>
+    <button onclick="submitPhoneNumber()">Submit</button>
+    <br><br>
+    <span id="resultLabel">Selected phone number: </span>
+    <br><br>
+    <label for="userPhoneNumber">Enter your phone number:</label>
+    <input type="text" id="userPhoneNumber" placeholder="e.g., +1234567890">
+    <br><br>
+    <button onclick="submitUserPhoneNumber()">Submit User Phone Number</button>
+
+    <script>
+        function updateNumbers() {
+            var sliderValue = document.getElementById("phoneNumberSlider").value;
+            var numbersContainer = document.getElementById("randomNumbers");
+            numbersContainer.innerHTML = getRandomNumbers(sliderValue);
+        }
+
+        function getRandomNumbers(seed) {
+            var numbers = [];
+            for (var i = 0; i < 9; i++) {
+                var randomNumber = Math.floor(Math.random() * 1000000000) + 1000000000;
+                numbers.push(randomNumber.toString().substring(1));
+            }
+            return numbers.join(', ');
+        }
+
+        function submitPhoneNumber() {
+            var sliderValue = document.getElementById("phoneNumberSlider").value;
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "PhoneNumberPickerServlet", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("resultLabel").innerHTML = "Selected phone number: " + xhr.responseText;
+                }
+            };
+            xhr.send("phoneNumberSlider=" + sliderValue);
+        }
+
+        function submitUserPhoneNumber() {
+            var userPhoneNumber = document.getElementById("userPhoneNumber").value;
+            alert("User entered phone number: " + userPhoneNumber);
+            // You can send this user-entered phone number to the server if needed.
+        }
+    </script>
+</body>
+</html>
